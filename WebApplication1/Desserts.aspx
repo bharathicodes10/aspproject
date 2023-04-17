@@ -9,6 +9,29 @@
             align-items: center;
             padding: 50px;
         }
+        input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
 
         .left1, .right1, .left2, .right2 {
             margin: 20px;
@@ -28,10 +51,6 @@
             margin-bottom: 10px;
             text-align: left;
 
-.form-group {
-margin-bottom: 10px;
-text-align: left;
-}
 
 .left1 {
 float: left;
@@ -123,6 +142,10 @@ background-color: #f2f2f2;
             <div class="form-group">
                 <label for="txtuid">Id:</label>
                 <asp:TextBox ID="txtuid" runat="server" CssClass="form-control"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label for="txtuname">Name:</label>
+                <asp:TextBox ID="txtuname" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <div class="form-group">
                 <label for="txtupos">Price:</label>

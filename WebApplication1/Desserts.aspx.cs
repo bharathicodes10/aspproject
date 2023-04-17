@@ -57,13 +57,14 @@ namespace WebApplication1
 
         protected void btnusub_Click(object sender, EventArgs e)
         {
+            string name = txtuname.Text;
             string empid = txtuid.Text;
             string emppos = txtupos.Text;
             string empsal = txtusal.Text;
             try
             {
                 connection.Open();
-                cmd = "update Desserts set Price='" + emppos + "',Quantity='" + empsal + "' where DessertId='" + empid + "'";
+                cmd = "update Desserts set Name='"+name+"', Price='" + emppos + "',Quantity='" + empsal + "' where DessertId='" + empid + "'";
                 command = new MySqlCommand(cmd, connection);
                 command.ExecuteNonQuery();
                 connection.Close();
